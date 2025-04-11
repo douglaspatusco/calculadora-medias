@@ -7,92 +7,172 @@
 
 body {
     background-color: #E7E7E7;
-    padding-top: 100px;
 }
 
 header {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-}
 
-header img {
-    height: 36px;
-    margin-right: 16px;
-}
+    @media (min-width: 320px) and (max-width: 768px) {
+        margin: 0;
+    }
 
-header h1 {
-    font-size: 40px;
-    font-weight: bold;
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    img {
+        height: 36px;
+        margin-right: 16px;
+    }
 }
 
 .container {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto; /* Para centralizar na horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 80px 32px;
+    
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        padding: 80px 16px;
+        width: 100%;
+    }
 }
 
 form {
     display: flex;
-    max-width: 640px;
-    width: 100%;
     justify-content: space-between;
-    margin-bottom: 56px;
-}
+    margin-bottom: 80px;
+    width: 50%;
 
-form input {
-    font-size:  24px;
-    background-color: #fff;
-    border: none;
-    border-bottom: 2px solid #000;
-    padding: 8px;
-}
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin: 0;
+    }
 
-form button {
-    background-color: #009432;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
+    div {
+        display: flex;
+        gap: 16px;
+    }
+
+    input {
+        font-size: 16px;
+        background-color: #fff;
+        padding: 8px;
+        border: none;
+        border-top: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 2px solid #bbb;
+        border-left: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+
+        &[type=number]::-webkit-inner-spin-button { 
+            -webkit-appearance: none;
+        }
+
+        &[type=number] { 
+            -moz-appearance: textfield;
+            appearance: textfield;
+            width: 80px;
+        }
+    }
+
+    button {
+        background-color: #009432;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 8px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: #007a2e;
+        }
+
+        &:active {
+            transform: scale(0.95);
+            background-color: #006421;
+        }
+    }
 }
 
 table {
     width: 100%;
-}
 
-table th {
-    border-bottom: 2px solid #000;
-    padding: 16px;
-    font-size: 24px;
-    font-weight: bold;
-}
+    @media (min-width: 320px) and (max-width: 768px) {
+        padding: 16px;
+        width: 100%
+    }
 
-table td {
-    padding: 16px 0;
-    text-align: center;
-    font-size: 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+    th {
+        border-bottom: 2px solid #000;
+        padding: 16px;
+        font-size: 24px;
+        font-weight: bold;
 
-table td img {
-    height: 30px;
+        @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    td {
+        padding: 16px 0;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+        img {
+            height: 30px;
+        }
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    tfoot {
+        td {
+            font-size: 20px;
+            font-weight: bold;
+
+            @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 16px;
+        }
+        }
+    }
 }
 
 .resultado {
     padding: 8px;
     font-weight: bold;
     color: #fff;
-    background-color: #000;
-    border-radius: 3px;
-
 }
 
 .aprovado {
-    background-color: #009432;
+    color: #009432;
 }
 
 .reprovado {
-    background-color: red;
+    color: red;
 }
