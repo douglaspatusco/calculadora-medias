@@ -32,7 +32,7 @@ O aluno é considerado:
 ## 📦 Como usar localmente
 
 ```bash
-git clone https://github.com/douglaspatusco/calculadora_medias.git
+git clone https://github.com/douglaspatusco/calculadora-medias.git
 
 cd calculadora-medias
 
